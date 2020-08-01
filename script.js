@@ -1,3 +1,5 @@
+//initializing the constants:
+
 const grid = document.getElementById("grid");
 const gridSquare = document.createElement("div");
 const Buttonreset = document.querySelector(".buttonreset");
@@ -6,6 +8,7 @@ const colourButton = document.querySelector(".buttoncolour");
 const gridButton = document.querySelector(".buttongrid");
 let gridSquaresClass;
 
+//initializing the board:
 function myFunction() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
@@ -25,7 +28,7 @@ function drawGrid(numSquares = 18) {
     }
     grid.style.cssText = `grid-template-columns: repeat(${numSquares}, 1fr); grid-template-rows: repeat(${numSquares}, 1fr)`;
 }
-
+//set-up the color functions:
 function addColourClass() {
     gridSquaresClass = Object.values(document.getElementsByClassName("grid-item"));
     gridSquaresClass.forEach(function(gridSquare) {
